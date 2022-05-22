@@ -17,7 +17,7 @@ const mapCoordinates = {
  */
 export function subscribeToCoordinates(
   callback: (coordinates: Coordinates[]) => void,
-  pollIntervalMs: number
+  pollIntervalMs: number = 5
 ) {
   // Dummy initial coordinates
   let coordinates: Coordinates[] = [

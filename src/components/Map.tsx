@@ -13,8 +13,7 @@ const Map: React.FC = () => {
   // Simulate subscription to coordinate updates.
   useEffect(() => {
     coordinatesSubscriptionId.current = subscribeToCoordinates(
-      (newCoordinates) => setCoordinates(newCoordinates),
-      5
+      (newCoordinates) => setCoordinates(newCoordinates)
     )
 
     // Stop listening for updates when component unmounts.
