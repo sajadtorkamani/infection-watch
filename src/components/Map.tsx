@@ -7,7 +7,6 @@ import Dump from './Dump'
 
 const Map: React.FC = () => {
   const [coordinates, setCoordinates] = useState<Coordinates[]>([])
-  const mapElement = useRef<HTMLDivElement>(null)
   const coordinatesSubscriptionId = useRef<ReturnType<typeof setInterval>>()
 
   // Simulate subscription to coordinate updates.
@@ -26,7 +25,7 @@ const Map: React.FC = () => {
     <>
       <h1 className="text-3xl mb-6">Dunder Mifflin Office</h1>
 
-      <div className="w-[1280px] h-[700px] relative" ref={mapElement}>
+      <div className="w-[1280px] h-[700px] relative">
         <img
           src={mapImageUrl}
           alt="Map"
