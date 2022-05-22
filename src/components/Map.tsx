@@ -9,7 +9,7 @@ const Map: React.FC = () => {
   const [coordinates, setCoordinates] = useState<Coordinates[]>([])
   const coordinatesSubscriptionId = useRef<ReturnType<typeof setInterval>>()
 
-  // Subscribe to coordinate updates
+  // Simulate subscription to coordinate updates.
   useEffect(() => {
     coordinatesSubscriptionId.current = subscribeToCoordinates(
       (newCoordinates) => setCoordinates(newCoordinates),
