@@ -7,6 +7,7 @@ import Dump from './Dump'
 
 const Map: React.FC = () => {
   const [coordinates, setCoordinates] = useState<Coordinates[]>([])
+  const mapElement = useRef<HTMLDivElement>(null)
   const coordinatesSubscriptionId = useRef<ReturnType<typeof setInterval>>()
 
   // Simulate subscription to coordinate updates.
@@ -21,8 +22,6 @@ const Map: React.FC = () => {
       clearInterval(coordinatesSubscriptionId.current)
     }
   }, [])
-
-  const mapElement = useRef<HTMLDivElement>(null)
 
   return (
     <>
