@@ -14,7 +14,7 @@ const Map: React.FC = () => {
   useEffect(() => {
     coordinatesSubscriptionId.current = subscribeToCoordinates(
       (newCoordinates) => setCoordinates(newCoordinates),
-      10
+      5
     )
 
     // Stop listening for updates when component unmounts.
@@ -35,11 +35,7 @@ const Map: React.FC = () => {
         />
 
         {coordinates.map((coords, index) => (
-          <MapMarker
-            key={index}
-            coordinates={coords}
-            mapElement={mapElement.current}
-          />
+          <MapMarker key={index} coordinates={coords} />
         ))}
       </div>
 
