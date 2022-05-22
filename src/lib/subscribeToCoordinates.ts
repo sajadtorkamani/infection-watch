@@ -2,8 +2,7 @@ import { Coordinates } from '../types'
 
 // Hard-coded for simplicity to keep the marker within the map bounds.
 // In practice, we could overlay an image over Google Maps or an equivalent
-// map software. Something like this:
-// https://developers.google.com/maps/documentation/javascript/examples/maptype-image-overlay
+// map software. Something like this: https://tinyurl.com/map-overlay
 const mapCoordinates = {
   startX: 15,
   endX: 1200,
