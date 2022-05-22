@@ -11,9 +11,9 @@ const mapCoordinates = {
 }
 
 /**
- * @param callback - Function that's called the with the new coordinates.
- * @param pollIntervalMs - How often to poll for new updates (assuming we're
- * polling instead of listening for server-side events).
+ * @param callback - Function that's called with the new coordinates.
+ * @param pollIntervalMs - How often to poll for new updates in milliseconds.
+ *    (In practice, we'd probably listen for server-side events).
  */
 export function subscribeToCoordinates(
   callback: (coordinates: Coordinates[]) => void,
